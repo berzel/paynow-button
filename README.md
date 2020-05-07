@@ -14,6 +14,6 @@ I only have one endpoint `POST /v1/generate-paynow-link` which you can utilize t
 
 Here's a snapshot for reference.
 
-![example paynow php button documentation](https://github.com/Berzel/paynow-button/blob/master/paynow_link.png)
+![example paynow php button documentation](https://raw.githubusercontent.com/Berzel/paynow-button/master/paynow_link.png)
 
 That's all.
