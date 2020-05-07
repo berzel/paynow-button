@@ -14,7 +14,9 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return response()->json([
+        'message' => 'I only exist to help you generate links for paynow payment buttons. Please check https://github.com/Berzel/paynow-button for more details.'
+        ], 200);
 });
 
 $router->post('v1/generate-paynow-link', [
