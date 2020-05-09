@@ -22,3 +22,9 @@ $router->get('/', function () use ($router) {
 $router->post('v1/generate-paynow-link', [
     'uses' => 'GenerateLinkController'
 ]);
+
+$router->options('v1/generate-paynow-link', function () use ($router) {
+    return response()->json([
+        'message' => 'good'
+    ]);
+});
