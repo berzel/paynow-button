@@ -27,6 +27,11 @@ $router->get('/', function () use ($router) {
                 'href' => 'https://github.com/Berzel/paynow-button',
                 'type' => 'GET'
             ],
+            [
+                'rel' => 'paynow-docs',
+                'href' => 'https://developers.paynow.co.zw/docs/simple_paynow_request_button.html',
+                'type' => 'GET'
+            ],
             [    
                 'rel' => 'v1',
                 'href' => url('v1'),
