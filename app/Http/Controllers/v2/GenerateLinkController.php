@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\v2;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class GenerateLinkController extends Controller {
-
 
     public function __invoke(Request $request)
     {
@@ -27,6 +27,6 @@ class GenerateLinkController extends Controller {
     
         return response()->json([
             'link' => 'https://www.paynow.co.zw/payment/link/'. $customerEmailAddress . '?q=' . $params 
-        ], 200);
+        ], 201);
     }
 }

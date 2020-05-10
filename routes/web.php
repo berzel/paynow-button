@@ -19,12 +19,24 @@ $router->get('/', function () use ($router) {
         ], 200);
 });
 
-$router->post('v1/generate-paynow-link', [
-    'uses' => 'GenerateLinkController'
+/**
+ * API Version 2
+ */
+$router->post('v2/links', [
+    'uses' => 'v2\GenerateLinkController'
 ]);
 
-$router->options('v1/generate-paynow-link', function () use ($router) {
-    return response()->json([
-        'message' => 'good'
-    ]);
-});
+$router->options('v2/links', [
+    'uses' => 'CorsController'
+]);
+
+/**
+ * API Version 1
+ */
+$router->post('v1/generate-paynow-link', [
+    'uses' => 'v1\GenerateLinkController'
+]);
+
+$router->options('v1/generate-paynow-link', [
+    'uses' => 'CorsController'
+]);
