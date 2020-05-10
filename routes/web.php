@@ -53,10 +53,6 @@ $router->post('v2/links', [
     'uses' => 'v2\GenerateLinkController'
 ]);
 
-$router->options('v2/links', [
-    'uses' => 'CorsController'
-]);
-
 $router->get('v2', function () use ($router) {
     return response()->json([
         'links' => [
@@ -79,10 +75,6 @@ $router->get('v2', function () use ($router) {
  */
 $router->post('v1/generate-paynow-link', [
     'uses' => 'v1\GenerateLinkController'
-]);
-
-$router->options('v1/generate-paynow-link', [
-    'uses' => 'CorsController'
 ]);
 
 $router->get('v1', function () use ($router) {
