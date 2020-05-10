@@ -16,12 +16,20 @@ class CorsMiddleware
      */
     public function handle($request, Closure $next)
     {
+        $corsHeaders = [
+            'Access-Control-Max-Age' => '86400',
+            'Access-Control-Allow-Origin' => '*',
+            'Access-Control-Allow-Credentials' => 'true',
+            'Access-Control-Allow-Headers' => 'Content-Type',
+            'Access-Control-Allow-Methods' => 'POST, GET, PUT, DELETE, OPTIONS'
+        ];
+
         $response = $next($request);
-        $response->headers->set('Access-Control-Allow-Origin', '*');
-        $response->headers->set('Access-Control-Allow-Credentials', 'true');
-        $response->headers->set('Access-Control-Max-Age', '86400');
-        $response->headers->set('Access-Control-Allow-Headers', 'Content-Type');
-        $response->headers->set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
+
+        foreach ($corsHeaders as $header => $value) {
+            $response->headers->set($header, $value);
+        }
+        
         return $response;
     }
 }
