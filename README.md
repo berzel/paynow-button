@@ -4,7 +4,7 @@ This little service allows you to generate links (urls) for [Paynow](https://pay
 
 ## Official Documentation
 
-This service only has one endpoint `POST /v1/generate-paynow-link` or if you're RESTafarian `POST /v2/links`, which you can utilize to generate the links. Don't worry it's neither demanding nor chatty, It only requires the following parameters. Here's the base URL `https://ancient-eyrie-77250.herokuapp.com`, you can also use it to discover the API on your own.
+This service only has one endpoint `POST /v1/generate-paynow-link` or if you're RESTafarian `POST /v2/links`, which you can utilize to generate the links. Don't worry it's neither demanding nor chatty, It only requires the following parameters. Here's the base URL `https://paynow-simple-button.herokuapp.com`, you can also use it to discover the API on your own.
 
 - `amount` : The amount that you are charging the user. Example 95.25. This field is required
 - `merchant_email` : The email address of the merchant account accepting payments on paynow. This field is required
